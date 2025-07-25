@@ -1,70 +1,89 @@
-# Getting Started with Create React App
+# 🌤 Nearby Weather & Speed Indicator App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A React-based web application that displays **real-time weather** information for the user's current location, including temperature and wind speed.  
+It also visualizes the wind speed using the **Canvas API** and shows **network status** using the **Network Information API**.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## **Features**
+- **Geolocation API**: Automatically detects the user's location (latitude & longitude).
+- **OpenWeather API**: Fetches real-time weather data (temperature, wind speed, and location name).
+- **Canvas API**: Draws a dynamic **wind speed gauge**.
+- **Network Information API**: Displays the user's network status (online/offline) and connection speed.
+- **Beautiful UI**: Includes background images and styled weather cards.
+- **Environment Variables**: API keys are securely stored in a `.env` file.
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## **Tech Stack**
+- **Frontend:** React JS
+- **APIs:** 
+  - Geolocation API
+  - Canvas API
+  - Network Information API
+  - OpenWeather REST API
+- **CSS Styling:** Custom CSS
+- **Axios:** For API calls
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## **Project Structure**
+nearby-weather-app/
+│
+├── public/
+│ └── index.html
+│
+├── src/
+│ ├── components/
+│ │ ├── WeatherInfo.js
+│ │ ├── CanvasGauge.js
+│ │ └── NetworkStatus.js
+│ ├── hooks/
+│ │ └── useGeolocation.js
+│ ├── App.js
+│ ├── App.css
+│ ├── index.js
+│ └── index.css
+│
+├── .env
+├── .gitignore
+├── package.json
+└── README.md
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## **Setup Instructions**
 
-### `npm run build`
+### **1. Clone the Repository**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+git clone https://github.com/rakeshaa2002/nearby-weather
+cd nearby-weather
+2. Install Dependencies
+npm install
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. Add Your API Key
+Create a .env file in the root directory and add:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+REACT_APP_WEATHER_KEY=your_openweather_api_key
+4. Start the App
 
-### `npm run eject`
+npm start
+The app will run at http://localhost:3000.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+How It Works
+Geolocation API detects your current location.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+OpenWeather API fetches the weather data based on your latitude and longitude.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Canvas API draws a wind speed gauge.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Network Information API shows your network status and speed.
 
-## Learn More
+Screenshots
+<img width="1366" height="768" alt="Screenshot (22)" src="https://github.com/user-attachments/assets/75ceeb23-a781-401e-9a01-34b31906dbba" />
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+License
+This project is licensed under the MIT License.
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Author
+Developed by Rakesha N (MCA, 2024) – Passionate Python & React Developer.
