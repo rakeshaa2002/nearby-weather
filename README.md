@@ -51,6 +51,7 @@ nearby-weather-app/
 └── README.md
 ---
 
+deployed link:https://spectacular-bubblegum-32b9b8.netlify.app/
 ## **Setup Instructions**
 
 ### **1. Clone the Repository**
